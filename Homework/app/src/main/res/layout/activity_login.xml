@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp" tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="220px"
+        android:layout_height="220px"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/iconBg">
+
+        <ImageView
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:id="@+id/imageView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/user_lock" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/LoginBg"
+        android:layout_below="@+id/iconBg">
+
+        <EditText
+            android:layout_width="400px"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="账号、邮箱或手机号"
+            android:textSize="25px"
+            android:drawableLeft="@drawable/name"
+            android:ems="10"
+            android:id="@+id/name_EditT"
+            android:layout_marginTop="41dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/password_EditT"
+            />
+
+        <EditText
+            android:layout_width="400px"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/password_EditT"
+            android:hint="密码"
+            android:textSize="25px"
+            android:drawableLeft="@drawable/password"
+            android:layout_below="@+id/name_EditT"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ButtonBg">
+
+        <Button
+            android:layout_width="400px"
+            android:layout_height="100px"
+            android:text="登陆"
+            android:textSize="30px"
+            android:id="@+id/in_Button"
+            android:layout_marginBottom="83dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="没有帐号？快点击注册"
+            android:id="@+id/login_TextV"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="47dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="忘记密码？"
+            android:id="@+id/foreign_TextV"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

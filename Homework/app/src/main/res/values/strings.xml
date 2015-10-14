@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Homework</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_activity__main">Activity_Main</string>
+    <string name="title_activity_activity__me">Activity_Me</string>
+    <string name="title_activity_activity__home">Activity_Home</string>
+    <string name="title_activity_activity_">Activity_Activity</string>
+</resources>
