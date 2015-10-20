@@ -1,137 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" 
-    android:background="@drawable/de_bg">
-    
-    <TextView
-        android:layout_height="50px">
-       
-    </TextView>
-    
-    
-    
-    
-     <ImageView
-            android:id="@+id/de_login_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-          
-            android:src="@drawable/de_pub_logo"
-             android:gravity="center"  
-          android:layout_gravity="center"  />
-     <TextView
-        android:layout_height="50px">
-       
-    </TextView>
-    
+    android:background="@drawable/de_bg"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText" >
+
+    <TextView android:layout_height="50dp"
+        android:layout_width="match_parent"   > </TextView>
+
+    <ImageView
+        android:contentDescription="@string/app_name"
+        android:id="@+id/de_login_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:src="@drawable/de_pub_logo" />
+
+    <TextView android:layout_height="50dp"
+        android:layout_width="match_parent"   > </TextView>
 
     <LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical" >
-      
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
         <LinearLayout
-       android:layout_width="fill_parent" 
-       android:layout_height="50dip"
-        android:paddingLeft="30px"
-         android:paddingRight="30px"
-       android:orientation="horizontal">
-     <ImageView 
-         android:src="@drawable/de_btn_main_personal_information"
-         android:layout_width="0px"
-         android:layout_height="wrap_content"
-         android:layout_weight="1"
-     />   
-       "
-        <EditText
-        android:id="@+id/login_username"
-        android:layout_width="0px"
-        android:layout_height="50px"
-        android:layout_weight="9"
-        android:hint="用户名"
-        />
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp" >
+
+            <ImageView
+                android:contentDescription="@string/app_name"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/de_btn_main_personal_information" />
        
+
+          <EditText
+                android:id="@+id/login_username"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="9"
+                android:hint="用户名" />
         </LinearLayout>
-        
-        
-           <LinearLayout
-       android:layout_width="fill_parent" 
-       android:layout_height="50dip"
-        android:paddingLeft="30px"
-         android:paddingRight="30px"
-       android:orientation="horizontal">
-     <ImageView 
-         android:src="@drawable/de_btn_main_privacy"
-         android:layout_width="0px"
-         android:layout_height="wrap_content"
-         android:layout_weight="1" />   
-        <EditText
-        android:id="@+id/login_password"
-        android:layout_width="0px"
-        android:layout_height="50px"
-        android:layout_weight="9"
-        android:password="true"
-        
-        android:hint="密码"> </EditText>
-       </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp" >
+
+            <ImageView
+               android:contentDescription="@string/app_name"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/de_btn_main_privacy" />
+
+            <EditText
+                android:id="@+id/login_password"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="9"
+                android:hint="密码"
+                android:inputType="textPassword" > </EditText>
+        </LinearLayout>
     </LinearLayout>
 
-     <LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" >
 
-         <CheckBox
-             android:id="@+id/cb1"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_marginLeft="50dip"
-             android:layout_marginRight="30dip"
-             android:text="记住密码" 
-             />
+        <CheckBox
+            android:id="@+id/cb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dip"
+            android:layout_marginRight="30dip"
+            android:text="记住密码" 
+            android:button="@drawable/picture_unselected" />
 
-         <CheckBox
-             android:id="@+id/cb2"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:paddingRight="40dip"
-             android:text="自动登录" />
+        <CheckBox
+            android:id="@+id/cb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="40dip"
+            android:text="自动登录"
+            android:button="@drawable/picture_unselected" />
+    </LinearLayout>
 
-        </LinearLayout>
-        
-     <LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:layout_marginTop="20dip">
-         <Button 
-             android:id="@+id/user_login_button"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="登录"
-             android:layout_marginLeft="50dip"
-             android:textColor="#F7FBFD"
-             android:background="#0F9000"
-             android:width="70dip"
-             android:height="40dip"
-             android:textSize="18dip"
-             />
-         
-            <Button 
-             android:id="@+id/user_register_button"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="注册"
-             android:layout_marginLeft="50dip"
-             android:textColor="#F7FBFD"
-             android:width="70dip"
-             android:height="40dip"
-             android:background="#0F9000"
-             android:textSize="18dip"
-             />
-         
-     </LinearLayout>
-     
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dip" >
+
+        <Button
+            android:id="@+id/user_login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dip"
+            
+            android:height="40dip"
+            android:text="登录"
+            android:textColor="#F7FBFD"
+            android:textSize="18sp"
+            />
+
+         <Button
+            android:id="@+id/user_register_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dip"
+            
+            android:height="40dip"
+            android:text="注册"
+            android:textColor="#F7FBFD"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
 </LinearLayout>

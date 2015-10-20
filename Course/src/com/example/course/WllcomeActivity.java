@@ -17,10 +17,14 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
-import android.os.Bundle;
+import com.example.course.R;
+import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
-import android.view.Menu;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
@@ -28,30 +32,27 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends Activity implements OnClickListener {
-	private EditText login_username;
-	private EditText login_password;
-	private Button user_login_button;
-	private Button user_register_button;
+@TargetApi(Build.VERSION_CODES.GINGERBREAD)
+@SuppressLint("NewApi")
+public class WllcomeActivity extends Activity implements OnClickListener {
+private EditText login_username;
+private EditText login_password;
+private Button user_login_button;
+private Button user_register_button;
 
+	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
+	@SuppressLint("NewApi")
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_wllcome);
-		initWidget();
+protected void onCreate(Bundle savedInstanceState) {
+	super.onCreate(savedInstanceState);
+	StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+	StrictMode.setThreadPolicy(policy);
+	setContentView(R.layout.activity_wllcome);
+	initWidget();
 
-		
-		
-	}
-	
-	
-	
-
-
-
-
-	private void initWidget() {
-		// TODO Auto-generated method stub
+}
+	private void initWidget()
+	{
 		login_username=(EditText)findViewById(R.id.login_username);
 		login_password=(EditText)findViewById(R.id.login_password);
 		user_login_button=(Button)findViewById(R.id.user_login_button);
@@ -67,7 +68,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				if(!hasFocus){
 					String username=login_username.getText().toString().trim();
 					if(username.length()<4){
-						Toast.makeText(  MainActivity.this, "用户名不能小于4个字符",3000);
+						Toast.makeText( WllcomeActivity.this, "用户名不能小于4个字符", Toast.LENGTH_SHORT);
 					}
 				}
 			}
@@ -82,32 +83,14 @@ public class MainActivity extends Activity implements OnClickListener {
 				if(!hasFocus){
 					String password=login_password.getText().toString().trim();
 					if(password.length()<4){
-						Toast.makeText( MainActivity.this, "密码不能小于4个字符", 3000).show();
+						Toast.makeText( WllcomeActivity.this, "密码不能小于4个字符", Toast.LENGTH_SHORT);
 					}
 				}
 			}
 			
 		});
 	}
-
-
-
-
-
-
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.wllcome, menu);
-		return true;
-	}
-
-
-
-
-
-
+	
 
 	@Override
 	public void onClick(View v) {
@@ -116,35 +99,29 @@ public class MainActivity extends Activity implements OnClickListener {
 		{
 		case R.id.user_login_button:
 			if(checkEdit())
-			{	
-				
+			{
 				login();
 			}
 			
 			break;
 		case R.id.user_register_button:
-			Intent intent2=new Intent( MainActivity.this,LoginActivity.class);
+			Intent intent2=new Intent( WllcomeActivity.this,LoginActivity.class);
 			startActivity(intent2);
 			break;
 		}
 	}
-
-
-
-
-
-
-
+	
 	private boolean checkEdit(){
 		if(login_username.getText().toString().trim().equals("")){
-			Toast.makeText( MainActivity.this, "用户名不能为空", Toast.LENGTH_SHORT).show();
+			Toast.makeText(WllcomeActivity.this, "用户名不能为空", Toast.LENGTH_SHORT).show();
 		}else if(login_password.getText().toString().trim().equals("")){
-			Toast.makeText( MainActivity.this, "密码不能为空", Toast.LENGTH_SHORT).show();
+			Toast.makeText(WllcomeActivity.this, "密码不能为空", Toast.LENGTH_SHORT).show();
 		}else{
 			return true;
 		}
 		return false;
 	}
+	
 	private void login(){
 		String httpUrl="http://192.168.1.102:8080/web-test/login.jsp";
 		HttpPost httpRequest=new HttpPost(httpUrl);
@@ -182,13 +159,13 @@ public class MainActivity extends Activity implements OnClickListener {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			Toast.makeText( MainActivity.this, strResult, Toast.LENGTH_SHORT).show();
-			Intent intent=new Intent( MainActivity.this,IndexActivity.class);
+			Toast.makeText(WllcomeActivity.this, strResult, Toast.LENGTH_SHORT).show();
+			Intent intent=new Intent(WllcomeActivity.this,IndexActivity.class);
 			startActivity(intent);
 		}
 		else
 		{
-			Toast.makeText( MainActivity.this, "登录失败！", Toast.LENGTH_SHORT).show();
+			Toast.makeText(WllcomeActivity.this, "登录失败！", Toast.LENGTH_SHORT).show();
 		}
 		
 	}

@@ -122,7 +122,9 @@
     <string name="de_actionbar_set_public">"公众号"</string>
     <string name="de_actionbar_update_discussion">"修改讨论组昵称"</string>
     <string name="phone_camera">Camera</string>
-    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_login">登录快递小哥</string>
     <string name="title_activity_wllcome">WllcomeActivity</string>
+    <string name="title_activity_wellcome">WellcomeActivity</string>
+    <string name="title_activity_index">IndexActivity</string>
 
 </resources>

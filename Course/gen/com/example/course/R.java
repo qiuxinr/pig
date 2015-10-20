@@ -219,16 +219,18 @@ containing a value of this type.
         public static final int vertical=0x7f040001;
     }
     public static final class layout {
-        public static final int activity_login=0x7f030000;
-        public static final int activity_main=0x7f030001;
-        public static final int activity_wllcome=0x7f030002;
-        public static final int welcome=0x7f030003;
+        public static final int activity_index=0x7f030000;
+        public static final int activity_login=0x7f030001;
+        public static final int activity_main=0x7f030002;
+        public static final int activity_wllcome=0x7f030003;
+        public static final int welcome=0x7f030004;
     }
     public static final class menu {
-        public static final int log=0x7f0a0000;
-        public static final int login=0x7f0a0001;
-        public static final int main=0x7f0a0002;
-        public static final int wllcome=0x7f0a0003;
+        public static final int index=0x7f0a0000;
+        public static final int log=0x7f0a0001;
+        public static final int login=0x7f0a0002;
+        public static final int main=0x7f0a0003;
+        public static final int wllcome=0x7f0a0004;
     }
     public static final class string {
         public static final int action_settings=0x7f080002;
@@ -351,7 +353,9 @@ containing a value of this type.
         public static final int set_sign_out=0x7f080017;
         public static final int the_blacklist=0x7f08002f;
         public static final int the_price=0x7f080047;
+        public static final int title_activity_index=0x7f08006d;
         public static final int title_activity_login=0x7f08006a;
+        public static final int title_activity_wellcome=0x7f08006c;
         public static final int title_activity_wllcome=0x7f08006b;
         public static final int update_log=0x7f080035;
         public static final int update_profile_faiture=0x7f08003c;

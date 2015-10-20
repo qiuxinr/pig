@@ -25,13 +25,14 @@
             android:name="com.example.course.MainActivity"
             android:label="@string/title_activity_login" >
         </activity>
-       
-        <activity
+              <activity
             android:name="com.example.course.LoginActivity"
             android:label="@string/title_activity_wllcome" >
         </activity>
-        
-       
+        <activity
+            android:name="com.example.course.IndexActivity"
+            android:label="@string/title_activity_index" >
+        </activity>
     </application>
 
 </manifest>
