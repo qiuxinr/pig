@@ -3,13 +3,17 @@ package com.example.course;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.widget.TextView;
 
 public class LoginActivity extends Activity {
-
+	TextView textview1=null;
+	String http1="";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_seach);
+		textview1=(TextView) this.findViewById(R.id.rc_search_list);
+		
 	}
 
 	@Override

@@ -20,6 +20,8 @@ import org.apache.http.util.EntityUtils;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -33,27 +35,27 @@ public class MainActivity extends Activity implements OnClickListener {
 	private EditText login_password;
 	private Button user_login_button;
 	private Button user_register_button;
-
-	@Override
+	public  String username;
+	public  String userpassword;
+	private SQLiteDatabase db1;
+	public Sqlite db;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		
 		setContentView(R.layout.activity_wllcome);
 		initWidget();
-
+		db = new Sqlite(MainActivity.this);
 		
 		
 	}
 	
-	
-	
-
-
-
-
 	private void initWidget() {
 		// TODO Auto-generated method stub
 		login_username=(EditText)findViewById(R.id.login_username);
 		login_password=(EditText)findViewById(R.id.login_password);
+		 username=login_username.getText().toString();
+		userpassword=login_password.getText().toString();
 		user_login_button=(Button)findViewById(R.id.user_login_button);
 		user_register_button=(Button)findViewById(R.id.user_register_button);
 		user_login_button.setOnClickListener(this);
@@ -90,23 +92,12 @@ public class MainActivity extends Activity implements OnClickListener {
 		});
 	}
 
-
-
-
-
-
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.wllcome, menu);
 		return true;
 	}
-
-
-
-
-
 
 
 	@Override
@@ -118,21 +109,17 @@ public class MainActivity extends Activity implements OnClickListener {
 			if(checkEdit())
 			{	
 				
-				login();
-			}
+				login(username,userpassword);
+			} 
 			
 			break;
 		case R.id.user_register_button:
-			Intent intent2=new Intent( MainActivity.this,LoginActivity.class);
+			Intent intent2=new Intent( MainActivity.this,RegisteredActivity.class);
 			startActivity(intent2);
+			
 			break;
 		}
 	}
-
-
-
-
-
 
 
 	private boolean checkEdit(){
@@ -145,51 +132,27 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 		return false;
 	}
-	private void login(){
-		String httpUrl="http://192.168.1.102:8080/web-test/login.jsp";
-		HttpPost httpRequest=new HttpPost(httpUrl);
-		List<NameValuePair> params=new ArrayList<NameValuePair>();
-		params.add(new BasicNameValuePair("username",login_username.getText().toString().trim()));
-		params.add(new BasicNameValuePair("password",login_password.getText().toString().trim()));
-		HttpEntity httpentity = null;
-		try {
-			httpentity = new UrlEncodedFormEntity(params,"utf8");
-		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		httpRequest.setEntity(httpentity);
-		HttpClient httpclient=new DefaultHttpClient();
-		HttpResponse httpResponse = null;
-		try {
-			httpResponse = httpclient.execute(httpRequest);
-		} catch (ClientProtocolException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		if(httpResponse.getStatusLine().getStatusCode()==200)
-		{
-			String strResult = null;
-			try {
-				strResult = EntityUtils.toString(httpResponse.getEntity());
-			} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			Toast.makeText( MainActivity.this, strResult, Toast.LENGTH_SHORT).show();
-			Intent intent=new Intent( MainActivity.this,IndexActivity.class);
-			startActivity(intent);
-		}
-		else
-		{
-			Toast.makeText( MainActivity.this, "µÇÂ¼Ê§°Ü£¡", Toast.LENGTH_SHORT).show();
-		}
+	public void login1() {
+		db1=db.getReadableDatabase();  
+		String where=db.C_NAME+"=?";
+		String[]  whereValues ={username};
+		Cursor cursor =db1.query(db.TABLE_NAME,null,where,whereValues,null,null,null);
 		
 	}
+	
+	public void login(String username1,String password1){  
+        db1=db.getReadableDatabase();  
+        String sql="select * from login where username=? and password=?";  
+        Cursor cursor=db1.rawQuery(sql, new String[]{username1,password1});         
+        if(cursor.moveToFirst()==true){  
+        	Toast.makeText(MainActivity.this,"µÇÂ½³É¹¦£¡",3000).show();
+			Intent intent=new Intent( MainActivity.this,LoginActivity.class);
+			startActivity(intent);
+            cursor.close();  
+            db1.close();
+           
+        }  
+        Toast.makeText(MainActivity.this,"ÕÊºÅ»òÃÜÂë´íÎó",3000).show();
+    }  
+	
 }

@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".LoginActivity" 
+    android:background="@drawable/de_bg">
+
+ 
+<LinearLayout 
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/rc_search_ed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#cfcfcf"
+            android:textSize="16sp"
+            android:layout_weight="2"
+            android:layout_marginLeft="16dp"
+           android:text="请输入要查询的快递单号"/>
+
+        <Button
+            android:id="@+id/rc_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:layout_marginRight="14dp"
+          
+            android:background="#0195ff"
+            android:layout_height="32dp"
+            android:textSize="15sp"
+            
+            android:text="搜索"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rc_search_list"></TextView>
+</LinearLayout>
+</RelativeLayout>
