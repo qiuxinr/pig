@@ -45,10 +45,10 @@
 
     </LinearLayout>
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/rc_search_list"></TextView>
+	<WebView
+	    android:id="@+id/word_web_view"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" /> 
+   
 </LinearLayout>
 </RelativeLayout>

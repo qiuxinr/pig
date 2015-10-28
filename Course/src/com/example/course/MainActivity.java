@@ -132,14 +132,14 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 		return false;
 	}
-	public void login1() {
+	/*public void login1() {
 		db1=db.getReadableDatabase();  
 		String where=db.C_NAME+"=?";
 		String[]  whereValues ={username};
 		Cursor cursor =db1.query(db.TABLE_NAME,null,where,whereValues,null,null,null);
 		
 	}
-	
+	*/
 	public void login(String username1,String password1){  
         db1=db.getReadableDatabase();  
         String sql="select * from login where username=? and password=?";  
@@ -151,7 +151,7 @@ public class MainActivity extends Activity implements OnClickListener {
             cursor.close();  
             db1.close();
            
-        }  
+        }  else
         Toast.makeText(MainActivity.this,"’ ∫≈ªÚ√‹¬Î¥ÌŒÛ",3000).show();
     }  
 	

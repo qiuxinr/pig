@@ -212,7 +212,6 @@ containing a value of this type.
         public static final int not_adjust=0x7f040002;
         public static final int rc_search_btn=0x7f04000b;
         public static final int rc_search_ed=0x7f04000a;
-        public static final int rc_search_list=0x7f04000c;
         public static final int register_passwd=0x7f040007;
         public static final int register_submit=0x7f040009;
         public static final int register_username=0x7f040006;
@@ -220,6 +219,7 @@ containing a value of this type.
         public static final int user_login_button=0x7f040011;
         public static final int user_register_button=0x7f040012;
         public static final int vertical=0x7f040001;
+        public static final int word_web_view=0x7f04000c;
     }
     public static final class layout {
         public static final int activity_index=0x7f030000;
