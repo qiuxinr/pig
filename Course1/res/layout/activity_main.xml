@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/de_bg">"
+    	<ImageView
+            android:id="@+id/de_login_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dip"
+            android:layout_marginRight="85dip"
+             android:gravity="center"  
+          android:layout_gravity="center" 
+            android:layout_marginTop="50dip"
+            android:src="@drawable/de_pub_logo" />
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册帐号"
+        android:textSize="22dip"
+        android:textColor="#FFFFFF"
+        android:gravity="center"  
+          android:layout_gravity="center" 
+        android:paddingTop="10dip"
+        
+        />
+    <LinearLayout
+       android:layout_width="fill_parent" 
+       android:layout_height="40dip"
+        android:paddingLeft="30px"
+         android:paddingRight="30px"
+       android:orientation="horizontal">
+     <ImageView 
+         android:src="@drawable/de_btn_main_personal_information"
+         android:layout_width="0px"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+     />  
+    <EditText 
+        android:id="@+id/register_username"
+        android:layout_width="0px"
+        android:layout_height="50px"
+        android:hint="@string/app_login_show"
+         android:layout_weight="9"
+        />
+	</LinearLayout>
+	
+     <LinearLayout
+       android:layout_width="fill_parent" 
+       android:layout_height="40dip"
+        android:paddingLeft="30px"
+         android:paddingRight="30px"
+       android:orientation="horizontal">
+     <ImageView 
+         android:src="@drawable/de_btn_main_privacy"
+         android:layout_width="0px"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+     />  
+     <EditText 
+        android:id="@+id/register_passwd"
+        android:layout_width="0px"
+        android:layout_height="50px"
+        android:layout_weight="9"
+        android:hint="@string/app_login_password"
+        />
+    </LinearLayout>
+    
+     
+      <LinearLayout
+       android:layout_width="fill_parent" 
+       android:layout_height="40dip"
+        android:paddingLeft="30px"
+         android:paddingRight="30px"
+       android:orientation="horizontal">
+     <ImageView 
+         android:src="@drawable/de_btn_main_privacy"
+         android:layout_width="0px"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+     />  
+     
+      <EditText 
+        android:id="@+id/reregister_passwd"
+        android:layout_width="0px"
+        android:layout_height="50px"
+        android:layout_weight="9"
+        android:hint="确认密码"
+        />
+      </LinearLayout>
+      <Button 
+          android:id="@+id/register_submit"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/de_select_friend_disable"
+          android:gravity="center"  
+          android:layout_gravity="center" 
+          android:layout_marginTop="60dip"
+          android:text="确定"
+          
+          android:textColor="#FFFFFF"
+          android:textSize="22dip"
+      
+          />
+      
+     
+</LinearLayout>
