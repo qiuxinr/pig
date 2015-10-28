@@ -200,26 +200,24 @@ containing a value of this type.
         public static final int welcome=0x7f020061;
     }
     public static final class id {
-        public static final int action_settings=0x7f040013;
+        public static final int action_settings=0x7f040011;
         public static final int adjust_content=0x7f040003;
-        public static final int cb1=0x7f04000f;
-        public static final int cb2=0x7f040010;
+        public static final int cb1=0x7f04000d;
+        public static final int cb2=0x7f04000e;
         public static final int de_login_logo=0x7f040005;
         public static final int elasticity_adjust=0x7f040004;
         public static final int horizontal=0x7f040000;
-        public static final int login_password=0x7f04000e;
-        public static final int login_username=0x7f04000d;
+        public static final int login_password=0x7f04000c;
+        public static final int login_username=0x7f04000b;
         public static final int not_adjust=0x7f040002;
-        public static final int rc_search_btn=0x7f04000b;
-        public static final int rc_search_ed=0x7f04000a;
         public static final int register_passwd=0x7f040007;
         public static final int register_submit=0x7f040009;
         public static final int register_username=0x7f040006;
         public static final int reregister_passwd=0x7f040008;
-        public static final int user_login_button=0x7f040011;
-        public static final int user_register_button=0x7f040012;
+        public static final int user_login_button=0x7f04000f;
+        public static final int user_register_button=0x7f040010;
         public static final int vertical=0x7f040001;
-        public static final int word_web_view=0x7f04000c;
+        public static final int word_web_view=0x7f04000a;
     }
     public static final class layout {
         public static final int activity_index=0x7f030000;
