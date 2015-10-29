@@ -106,7 +106,7 @@
     <string name="personal_send_voip">"语音聊天"</string>
 
     <!-- public account -->
-    <string name="public_account_search">"搜索"</string>
+    <string name="public_account_search">"查询快递"</string>
     <string name="public_add_address">"添加好友"</string>
     <string name="friend_send">"好友请求已发送"</string>
     <string name="friend_send_success">"发送好友请求成功"</string>
@@ -118,13 +118,13 @@
     <string name="de_actionbar_sub_discussion">"我的讨论组"</string>
     <string name="de_actionbar_sub_system">"系统消息"</string>
     <string name="de_actionbar_sub_defult">"聊天"</string>
-    <string name="de_actionbar_set_conversation">"聊天设置"</string>
-    <string name="de_actionbar_set_public">"公众号"</string>
-    <string name="de_actionbar_update_discussion">"修改讨论组昵称"</string>
-    <string name="phone_camera">Camera</string>
+    <string name="de_actionbar_set_conversation">"小哥好友圈"</string>
+    <string name="de_actionbar_set_public">"欢迎来到小哥"</string>
+    <string name="basicformation">"我的资料"</string>
+    <string name="phone_camera">代拿朋友圈</string>
     <string name="title_activity_login">登录快递小哥</string>
     <string name="title_activity_wllcome">注册小哥帐号</string>
-    <string name="title_activity_wellcome">WellcomeActivity</string>
-    <string name="title_activity_index">IndexActivity</string>
+    <string name="title_activity_wellcome">我的代拿任务</string>
+    <string name="title_activity_index">代拿人气王</string>
 
 </resources>

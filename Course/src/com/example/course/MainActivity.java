@@ -114,7 +114,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			
 			break;
 		case R.id.user_register_button:
-			Intent intent2=new Intent( MainActivity.this,RegisteredActivity.class);
+			Intent intent2=new Intent( MainActivity.this,BasicMainActivity.class);
 			startActivity(intent2);
 			
 			break;
@@ -146,7 +146,7 @@ public class MainActivity extends Activity implements OnClickListener {
         Cursor cursor=db1.rawQuery(sql, new String[]{username1,password1});         
         if(cursor.moveToFirst()==true){  
         	Toast.makeText(MainActivity.this,"µÇÂ½³É¹¦£¡",3000).show();
-			Intent intent=new Intent( MainActivity.this,LoginActivity.class);
+			Intent intent=new Intent( MainActivity.this,CustomTabActivity2.class);
 			startActivity(intent);
             cursor.close();  
             db1.close();

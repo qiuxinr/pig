@@ -1,0 +1,199 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".PersonalDataActivity" 
+      android:background="#ffffff">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <TableLayout
+       android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/wt"
+      >
+
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_column="2" 
+               android:drawableTop="@drawable/us"
+                android:text="非心" />
+            
+          
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+           >
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hotman" />
+            
+            <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add" />
+        </TableRow>
+
+     
+    </TableLayout>
+    <TableLayout
+         android:id="@+id/tableLayout1"
+         android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         >
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/zhuye"
+            android:gravity="left"
+            android:text="个人动态" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/right"
+            android:hint="此人什么都没写" />
+    
+        </TableLayout> 
+        <TableLayout
+            android:id="@+id/tableLayout1"
+         android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+              <Button
+            android:id="@+id/button4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/zhuye"
+            android:gravity="left"
+            android:text="个人信息" />
+              <TableRow
+                  android:id="@+id/tableRow3"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content" >
+
+                  <TextView
+                      android:id="@+id/textView1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="真实姓名" 
+                      android:textColor="#000000"/>
+                  <EditText
+                       android:id="@+id/editText1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:hint="未填写"/>
+                  
+              </TableRow>
+              <TableRow
+                  android:id="@+id/tableRow3"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content" >
+
+                  <TextView
+                      android:id="@+id/textView1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="出生日期" 
+                      android:textColor="#000000"/>
+                  <EditText
+                       android:id="@+id/editText1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:hint="未填写"/>
+                  
+              </TableRow>
+                <TableRow
+                  android:id="@+id/tableRow3"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content" >
+
+                  <TextView
+                      android:id="@+id/textView1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="学校" 
+                      android:textColor="#000000"/>
+                  <EditText
+                       android:id="@+id/editText1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:hint="未填写"/>
+                  
+              </TableRow>
+                <TableRow
+                  android:id="@+id/tableRow3"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content" >
+
+                  <TextView
+                      android:id="@+id/textView1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="学院" 
+                      android:textColor="#000000"/>
+                  <EditText
+                       android:id="@+id/editText1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:hint="未填写"/>
+                  
+              </TableRow>
+                <TableRow
+                  android:id="@+id/tableRow3"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content" >
+
+                  <TextView
+                      android:id="@+id/textView1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="班级" 
+                      android:textColor="#000000"/>
+                  <EditText
+                       android:id="@+id/editText1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:hint="未填写"/>
+                  
+              </TableRow>
+        </TableLayout>
+        </LinearLayout>
+    </ScrollView>  
+
+</RelativeLayout>
